@@ -1,0 +1,229 @@
+
+.section_1 h1 {
+    width: 100%;
+    font-size: 2em;
+    color: #38A169;
+    margin-bottom: 20px;
+}
+
+.section_2,
+.section_1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    border-bottom: 1px solid #ddd;
+}
+.section_1{
+    background-color: white;
+}
+.section_2 li {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.content {
+    max-width: 50%;
+}
+.section_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+  
+  .container-repairs h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2D9CDB;
+  }
+  
+  .repair-card {
+    width: 1000px; /* Más ancho */
+    height: 550px; /* Ajustado */
+    background: linear-gradient(135deg, #a6defd, #71cfe4);
+    color: #0b0d0e;
+    display: flex;
+    font-size: 1m; /* Letra más pequeña */
+     border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: transform 0.5s ease-in-out;
+  }
+.contenido h2{
+    font-size: 1.5em;
+    color: #1b5475;
+    margin-bottom: 10px;
+    text-align: center;
+}  
+  .contenido {
+    position: absolute;
+    padding: 20px;
+    text-align: justify;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .imagenes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .imagenes img {
+    width: 50%;
+    object-fit: cover;
+  }
+  
+  .repair-card:hover .contenido {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  
+  .repair-card:hover .imagenes {
+    transform: translateY(0%);
+  }
+  
+  .another-serv{
+    background-color: white;
+    text-align: justify;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 150px;    
+}
+.another-serv li {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.galeria-section h1{
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: #2D9CDB;
+    margin-bottom: 20px;
+}
+.container-galeria {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    position: relative; 
+    
+}
+.swiper {
+    width: 80%; /* Ancho del carrusel */
+    position: relative; /* Añade posición relativa */
+
+}
+
+.container-galeria {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    position: relative; 
+    
+}
+.swiper {
+    width: 80%; /* Ancho del carrusel */
+    position: relative; /* Añade posición relativa */
+
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .section_1{
+        padding: 15px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .content {
+        flex: 2;
+    }
+    .galeria-section h1,
+    .another-serv h2,
+    .section_1 h1,
+    .section_2 h1,
+    .container-repairs h2,
+    .content h1 {
+        font-size: 1.2em;
+        text-align: justify;
+    }
+    .another-serv {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+    .another-serv p,
+    .container-repairs p,
+    .content p {
+        font-size: 0.9em;
+        text-align: justify;
+    }
+    .image {
+        flex: 1;
+        max-width: 40%;
+    }
+    
+    .image img {
+        width: 100%;
+        height: auto;
+    }
+    .another-serv li {
+        font-size: 1em;
+        margin: 5px 0;
+        padding: 8px;
+        text-align: justify;
+        width: 100%;
+    }
+    .repair-card {
+        width: 90%; /* Reduce el ancho de las tarjetas */
+        max-width: 400px; /* Limita el tamaño máximo */
+        height: 300px; /* Reduce la altura de las tarjetas */ font-size: 12px; /* Reduce el tamaño del texto */
+    }
+
+    .repair-card img {
+        width: 100%; /* Ajusta las imágenes al tamaño reducido */
+        max-height: 180px; /* Limita la altura de las imágenes */
+        display: block;
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        object-fit: cover; /* Evita que las imágenes se distorsionen */
+    }
+
+    .repair-card p {
+        font-size: 11px; /* Reduce el texto en pantallas pequeñas */
+    }
+
+    .repair-card h2 {
+        font-size: 14px; /* Ajusta el tamaño del título */
+    }
+    
+}
+
+

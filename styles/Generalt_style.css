@@ -1,0 +1,293 @@
+/* Reset básico */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Estilos generales */
+body {
+    background-color: #c2fad8;
+    padding-top: 70px; /* Ajusta según sea necesario */
+}
+
+h1 {
+    font-size: 2.0em;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 9px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* --- Estilos generales de la barra de navegación --- */
+nav {
+    background: #fff;
+    padding: 15px 20px;
+    display: flex; 
+    align-items: center; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#google_translate_element {
+    margin-left: auto;
+    padding: 20px ;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.logo img {
+    height: 60px; 
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; 
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+/* --- Estilos para los enlaces principales de la barra de navegación --- */
+nav ul li a, .dropdown-title {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: block;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.btn_n {
+    display: inline-block;
+    background-color: white;
+    color: #2D9CDB;
+    padding: 8px 20px;
+    border: 2px solid #2D9CDB;
+    border-radius: 25px;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 0;
+    text-align: center;
+}
+
+.btn_n:hover {
+    background-color: #2D9CDB;
+    color: white;
+    border-color: #2D9CDB;
+}
+/* --- Estilos para los menús desplegables --- */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    min-width: 180px;
+}
+
+.dropdown-menu li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.n_t {
+    color: #2D9CDB;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #38A169;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #2F855A;
+}
+
+/* Estilos generales del footer */
+.footer {
+    background: #f8f8f8;
+    padding: 40px 20px;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-contact, .footer-links {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-logo {
+    width: 100px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-contact p i {
+    color: #28a745;
+    margin-right: 8px;
+}
+
+.footer-contact p,
+.footer-contact p a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #000;
+}
+
+.footer-links h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 15px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #28a745;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+/* Ajustar el nav en móviles */
+/* Ajustes generales para versión móvil */
+@media (max-width: 768px) {
+    /* Reducir el espacio superior antes del nav */
+    body {
+        padding-top: 0;
+    }
+
+    /* Ajustar el menú para que sea más compacto */
+    nav {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+    .dropdown-menu {
+        position: static;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 0px 0px; /* Reducir el espaciado en la lista del nav */
+    }
+
+    /* Reorganizar el logo */
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-container img {
+        max-width: 120px;
+    }
+
+    /* Mover Google Translate debajo de 'Reservar ahora' */
+    .translate-container {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-contact, .footer-links {
+        margin-bottom: 20px;
+    }
+    /* Reducir el tamaño de la letra en el footer y el nav */
+    nav ul li a, .dropdown-title, .footer {
+        font-size: 0.9em;
+    }
+    .footer-contact p{
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+    .footer-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .btn {
+        padding: 6px 15px;
+        font-size: 1em;
+    }
+}
